@@ -15,7 +15,7 @@ body {
 
 header {
   background-color: #fc6805;
-  color: rgb(5, 213, 250);
+  color: rgb(250, 246, 5);
   padding: 2rem;
 }
 
@@ -29,10 +29,11 @@ header p {
 }
 
 h2 {
-  color: #09e1fd;
+  color: #1909fd;
 }
 
 .projects {
+  color: rgb(8, 2, 8);
   background-color: #fd3f05;
   border-radius: 8px;
   padding: 1rem;
@@ -118,14 +119,14 @@ footer {
 body {
   margin: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #f58e08;
+  background-color: #fa3c02;
   color: #333;
   line-height: 1.6;
 }
 
 header {
-  background-color: #fd6703;
-  color: rgb(3, 248, 248);
+  background-color: #ff5f02;
+  color: rgb(19, 3, 248);
   padding: 2rem;
 }
 
@@ -139,7 +140,7 @@ header p {
 }
 
 h2 {
-  color: #37f0fd;
+  color: #fa05d9;
 
 }
 
@@ -212,4 +213,64 @@ body {
   animation: fadeInBody 1s ease-in-out;
   animation-delay: 0.3s;
   animation-fill-mode: both;
+
+  body {
+  background: #111;
+  color: #0ff;
+  font-family: 'Press Start 2P', monospace;
+  text-align: center;
+  padding-top: 30px;
+}
+
+.game-window {
+  position: relative;
+  width: 400px;
+  height: 200px;
+  background: #222;
+  border: 4px solid #0ff;
+  margin: 20px auto;
+  overflow: hidden;
+}
+
+.character {
+  position: absolute;
+  bottom: 10px;
+  left: 30px;
+  width: 160px;
+  height: 160px;
+  background: url('https://th.bing.com/th/id/OIP.QlTwi-T84VQIWEP7xZWvawHaNJ?w=115&h=199&c=7&r=0&o=7&pid=1.7&rm=3') no-repeat center/contain;
+}
+
+.ball {
+  position: absolute;
+  bottom: 10px;
+  left: 80px;
+  width: 80px;
+  height: 80px;
+  background: url('https://th.bing.com/th/id/OIP.teP5m6u_VsGAESu6JkTxewHaG3?w=177&h=180&c=7&r=0&o=7&pid=1.7&rm=3') no-repeat center/contain;
+  transition: transform 0.5s ease;
+}
+
+.goal {
+  position: absolute;
+  bottom: 10px;
+  right: 20px;
+  width: 180px;
+  height: 180px;
+  background: url('https://th.bing.com/th/id/OIP.kkObAA_F0v1zaQ6YeA5HYQHaEj?w=265&h=181&c=7&r=0&o=7&pid=1.7&rm=3') no-repeat center/contain;
+}
+
+button {
+  margin: 10px;
+  padding: 10px 20px;
+  background: #0ff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+#chakra-btn {
+  background: linear-gradient(to right, #00f, #0ff);
+  color: #fff;
 }
