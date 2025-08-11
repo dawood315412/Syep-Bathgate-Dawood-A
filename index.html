@@ -38,7 +38,55 @@
   </div>
   </header>
 
+  
 
+
+
+<section id="about" class="about container py-4">
+    <h2>About Me</h2>
+    <p>My favorite color is orange. I am a sports enthusiast, and my favorite sports are soccer and basketball. One of my favorite hobbies is watching anime because it helps me relax. My favorite anime is One Piece, followed by Naruto and then Blue Lock. My favorite soccer player is Cristiano Ronaldo, who wears the number 7 jersey—by the way, 7 is also my favorite number.I like to think of myself as a good listener, and I really enjoy taking on challenges that push me to think deeply. I’m definitely a team player, but I also appreciate the value of solo practice. It helps me work on my weaknesses so that when I do play with a team, I can contribute fully and not hold anyone back.</p>
+  
+  <section id="fighterSelect">
+  <h2>Choose Your Fighter</h2>
+  <div class="fighter-grid">
+    <div class="fighter-card" data-game="rasengan">
+      <img src="https://th.bing.com/th/id/OIP.jzkwzYVR5TDRl4_xqfVnXQHaFj?w=207&h=180&c=7&r=0&o=5&pid=1.7" alt="Naruto">
+      <h3>Naruto</h3>
+      
+    </div>
+    <div class="fighter-card" data-game="luffy">
+      <img src="https://th.bing.com/th/id/OIP.87_7g_8hEiKAQy0-7C7lDgHaEo?w=302&h=187&c=7&r=0&o=5&pid=1.7" alt="Luffy">
+      <h3>Luffy</h3>
+    <script>
+const fighterCards = document.querySelectorAll('.fighter-card');
+const gameSections = document.querySelectorAll('.game-section');
+
+fighterCards.forEach(card => {
+  card.addEventListener('click', () => {
+    const selectedGame = card.getAttribute('data-game');
+
+    // Hide all games
+    gameSections.forEach(section => section.classList.add('hidden'));
+
+    // Show selected game
+    document.getElementById(`${selectedGame}Game`).classList.remove('hidden');
+  });
+});
+</script>
+<div id="fighterIntro" class="hidden">
+  <h2 id="introQuote"></h2>
+</div>
+
+
+
+</section>
+
+<!-- Game Sections -->
+<section id="rasenganGame" class="game-section hidden">...</section>
+<section id="luffyGame" class="game-section hidden">...</section>
+
+
+  
 
 <head>
   <meta charset="UTF-8" />
@@ -60,13 +108,24 @@
   <button id="chakra-btn">Chakra Kick 🔥</button>
 
   <script src="script.js"></script>
+  
+
 </body>
 </html>
+  
+ <div class="luffy-video-right">
+  <iframe width="560" height="315"
+    src="https://www.youtube.com/embed/Z3f0ilmM38M?autoplay=1&mute=1&loop=1&playlist=Z3f0ilmM38M"
+    title="Best Luffy Moments in One Piece"
+    frameborder="0"
+    allow="autoplay; encrypted-media"
+    allowfullscreen>
+  </iframe>
+</div>
 
-<section id="about" class="about container py-4">
-    <h2>About Me</h2>
-    <p>My favorite color is orange. I am a sports enthusiast, and my favorite sports are soccer and basketball. One of my favorite hobbies is watching anime because it helps me relax. My favorite anime is One Piece, followed by Naruto and then Blue Lock. My favorite soccer player is Cristiano Ronaldo, who wears the number 7 jersey—by the way, 7 is also my favorite number.</p>
-  </section>
+</section>
+
+
 
 <section id="skills" class="projects container py-4">
     <h2>Skills</h2>
@@ -104,6 +163,22 @@
     <p>Email: Dawoodawal15@gmail.com</p>
     <p>Phone Number: (xxx-xxx-xxxx)</p>
   </section>
+
+  <form id="contactForm">
+  <label for="name">Name:</label>
+  <input type="text" id="name" name="name" required>
+
+  <label for="email">Email:</label>
+  <input type="email" id="email" name="email" required>
+
+  <label for="message">Message:</label>
+  <textarea id="message" name="message" required></textarea>
+
+  <button type="submit">Send</button>
+</form>
+
+<div id="status"></div>
+
 
 
 <footer class="text-center text-white py-3 bg-orange">
