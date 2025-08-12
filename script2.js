@@ -1,0 +1,69 @@
+const reviews = [
+  {
+    id: 1,
+    name: 'Maya Slater',
+    job: 'Friend',
+    img: 'data:image/jpeg;base64,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',
+    text: " Dawood is a kind, considerate friend he is always dedicated to his studies. He consistently is always pushing through obstacles whether personal or educational and his skills and creativity would be contribution to web development.",
+  },
+  {
+    id: 2,
+    name: 'Msr.Schoonmaker',
+    job: 'Math Teacher',
+    img: 'https://images.squarespace-cdn.com/content/v1/5bec73fa3917eec31d42357d/1600343180765-5H9DIP29CZ4SJ05H5MOJ/image-asset.png?format=500w;',
+    text: 'Alright, listen up, everyone — this site? It’s hotter than a jalapeño in July 🌶️. That orange and purple color combo? Bold. Loud. It screams, “I didn’t come to play, I came to SLAY.” The layout’s so clean you could eat off it — and trust me, we’ve seen some messy code before. The way Dawood sprinkled in his favorite anime and soccer player is like seasoning on a good stew — flavorful, personal, and just enough to make you think, “This kid’s got taste.” He flexed those HTML, CSS, and JavaScript skills right up front like a proud gym bro, and it’s hard not to respect that. And the photo? Chef’s kiss. It’s like the cherry on top of a sundae made of talent and good design choices. Dawood has built a solid site. Alright, not only does Dawood have a killer site, but he also works hard in class. You can tell he puts in the effort, always looking to learn and improve his skills. His dedication really shows in both his projects and his commitment to understanding the material. It’s impressive to see someone balancing creativity with hard work—it’s a winning combination! Keep it up, Dawood!',
+  },
+  {
+    id: 3,
+    name: 'Msr.Candelario',
+    job: 'History Teacher',
+    img: 'https://images.squarespace-cdn.com/content/v1/5bec73fa3917eec31d42357d/1627769679753-3RZ48FNSNDPVOYUQK9OG/Screen+Shot+2021-07-31+at+6.10.52+PM.png?format=500w',
+    text: 'Dawood is such a joy in my class! He is like a burst of sunshine on a cloudy day. Not only is he hardworking, but he also has this amazing ability to make everyone laugh, even when things get a bit tough. He is always bringing in his favorite anime references or sharing fun soccer facts, and it makes the lessons so much more engaging! Seriously, if he keeps this up, he is going to conquer the world—one giggle at a time!',
+  },
+];
+// select items
+const img = document.getElementById('person-img');
+const author = document.getElementById('author');
+const job = document.getElementById('job');
+const info = document.getElementById('info');
+
+const prevBtn = document.querySelector('.prev-btn');
+const nextBtn = document.querySelector('.next-btn');
+const randomBtn = document.querySelector('.random-btn');
+
+// set starting item
+let currentItem = 0;
+
+// load initial item
+window.addEventListener('DOMContentLoaded', function () {
+  const item = reviews[currentItem];
+  img.src = item.img;
+  author.textContent = item.name;
+  job.textContent = item.job;
+  info.textContent = item.text;
+});
+
+// show person based on item
+function showPerson(person) {
+  const item = reviews[person];
+  img.src = item.img;
+  author.textContent = item.name;
+  job.textContent = item.job;
+  info.textContent = item.text;
+}
+// show next person
+nextBtn.addEventListener('click', function () {
+  currentItem++;
+  if (currentItem > reviews.length - 1) {
+    currentItem = 0;
+  }
+  showPerson(currentItem);
+});
+// show prev person
+prevBtn.addEventListener('click', function () {
+  currentItem--;
+  if (currentItem < 0) {
+    currentItem = reviews.length - 1;
+  }
+  showPerson(currentItem);
+});
